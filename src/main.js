@@ -16,7 +16,7 @@ searchForm.addEventListener("submit", handleForm);
 
 function handleForm(event) {
     event.preventDefault();
-    console.log("Form submitted");
+    console.log("Працює чи нє");
 
 
     const inputValue = inputText.value.trim();
