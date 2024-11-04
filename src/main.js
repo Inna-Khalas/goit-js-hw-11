@@ -18,7 +18,6 @@ function handleForm(event) {
     event.preventDefault();
     console.log("Працює чи нє");
 
-
     const inputValue = inputText.value.trim();
     console.log(inputValue);
 
@@ -35,6 +34,7 @@ function handleForm(event) {
     fetchData(inputValue)
         .then(res => {
             if (res && res.length > 0) {
+
                 formResults(res);
                 if (lightbox) {
                     lightbox.refresh();
@@ -54,6 +54,8 @@ function handleForm(event) {
                 position: 'topRight',
                 title: 'Помилка',
                 message: 'Сталася помилка при отриманні зображень. Спробуйте ще раз!',
+                backgroundColor: '#ef4040',
+
             });
         })
 
