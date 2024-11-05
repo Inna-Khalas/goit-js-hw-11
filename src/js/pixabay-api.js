@@ -5,15 +5,12 @@ const API_URL = "https://pixabay.com/api/";
 
 export function fetchData(inputValue) {
 
-    const randomPage = Math.floor(Math.random() * 10) + 1;
-
     const options = new URLSearchParams({
         key: API_KEY,
         q: inputValue,
         image_type: "photo",
         orientation: "horizontal",
         safesearch: true,
-        page: randomPage,
         per_page: 15
     });
 
